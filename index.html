@@ -1,34 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-   <input type="text" name="" id="val1" placeholder="enterblock">
-   <input type="text" name="" id="val2" placeholder="enterline">
-   <button onclick="sol()">Multiply</button>
-    <div id="result"></div>
+  <div align = "center" style="background-color: grey; padding: 10vh;width: 60vh; margin-left: 30vh; border-radius: 20px 0 20px 0;">
+    <select name="" id="">
+      <option value="">math</option>
+      <option value="">Eng</option>
+      <option value="">Chm</option>
+      <option value="">Bio</option>
+      <option value="">Phy</option>
+    </select>
+    <input type="text" id="input1"><br><br>
+    <select name="" id="">
+      <option value="">math</option>
+      <option value="">Eng</option>
+      <option value="">Chm</option>
+      <option value="">Bio</option>
+      <option value="">Phy</option>
+    </select>
+    <input type="text" id="input2"><br><br>
+    <select name="" id="">
+      <option value="">math</option>
+      <option value="">Eng</option>
+      <option value="">Chm</option>
+      <option value="">Bio</option>
+      <option value="">Phy</option>
+    </select>
+    <input type="text" id="input3"><br><br>
+    <select name="" id="">
+      <option value="">math</option>
+      <option value="">Eng</option>
+      <option value="">Chm</option>
+      <option value="">Bio</option>
+      <option value="">Phy</option>
+    </select>
+    <input type="text" id="input4"><br><br>
+    <select name="" id="">
+      <option value="">math</option>
+      <option value="">Eng</option>
+      <option value="">Chm</option>
+      <option value="">Bio</option>
+      <option value="">Phy</option>
+    </select>
+    <input type="text" id="input5"><br><br>
 
-    <script>
-        function sol(){
-            tail='';
-            var v1 = val1.value
-            var v2 = val2.value
-            tail+='<table border=1>'
-                for (i=1; i<=v2; i++){
-                    tail+='<tr>'
-                        for (k=1; k<=v1; k++){
-                            tail+='<td>' + k + 'x' + i + '=' + (k*i) + '</td>' 
-                        }
-                        '</tr>'
-                }
-            '</table>'
-                result.innerHTML = tail
+    <button onclick="solve()">jamb</button><input type="text" id="solv">
+    <button onclick="check()">check result</button>
+    <div id="result" style="background-color: green; width: 200px;"></div>
+  </div>
 
-        }
-    </script>
 </body>
+<script>
+  function solve() {
+    solv.value = parseFloat(input1.value) + parseInt(input2.value) + parseInt(input3.value) + parseInt(input4.value) + parseInt(input5.value)
+  }
+  function check() {
+    if (solv.value >= 200) {
+      result.innerText = "congratulaton you"
+    }
+    else {
+      result.innerText = "sorry! no admission offered,try again next year"
+    }
+  }
+</script>
+
 </html>
